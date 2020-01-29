@@ -30,7 +30,7 @@ jobs:
     # deploy web app
     - uses: azure/webapps-deploy@users/suaggar/containerrelease
       with: 
-        app-name: mypythonapp  # Replace with your app name
+        app-name: niadakpythonapp  # Replace with your app name
         package: './myapp.zip'
 
     # Add startup command in app service configuration if required
