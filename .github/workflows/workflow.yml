@@ -6,7 +6,7 @@ jobs:
     steps:
 
     # checkout the repo
-    - uses: niadak/python-sample-vscode-flask-tutorial@master
+    - uses: actions/checkout@master
     
     # install dependencies
     - name: python install
