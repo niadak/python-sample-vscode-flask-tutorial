@@ -30,8 +30,3 @@ jobs:
         package: './myapp.zip'
 
     # Add startup command in app service configuration if required
-
-    # Azure logout 
-    - name: logout
-      run: |
-        az logout
