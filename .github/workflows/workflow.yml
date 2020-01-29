@@ -21,16 +21,12 @@ jobs:
     - name: archive myapp
       run: |
        zip -r myapp.zip .
-
-    # Azure login
-    - uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }} # Define secret variable in repository settings as per action documentation
         
     # deploy web app
     - uses: azure/webapps-deploy@users/suaggar/containerrelease
       with: 
         app-name: niadakpythonapp  # Replace with your app name
+        publish-profile: '${{ secrets.Publish_Profile }}'
         package: './myapp.zip'
 
     # Add startup command in app service configuration if required
